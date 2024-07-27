@@ -46,7 +46,8 @@ def main(fixed):
     wandb.init(project=wandb_name, mode="online" if args.use_wandb else "disabled",
                config=args.to_dict(),
                name=hparams,
-               entity="mls-stuttgart")
+               #entity="mls-stuttgart"
+               )
 
     if not os.path.isdir(args.log_path):
         os.mkdir(args.log_path)
